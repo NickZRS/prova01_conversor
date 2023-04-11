@@ -2,24 +2,24 @@
 </h1>
 <form action = "">
 
-    <h5>Valor em Reais:</h5>
-    <input type="number" [(ngModel)]="valor" name="valor"><br>
+    <h5>Valor Base:</h5>
+    <input class="form-control" type="number" [(ngModel)]="valor" name="valor"><br>
 
 
 
     <div class="list-group" id="moedas">
-      <button type="button" id="r-d" class="list-group-item list-group-item-action list-group-item-primary">Real para Dólar</button>
-      <button type="button" id="d-r" class="list-group-item list-group-item-action">Dólar para Real</button>
-      <button type="button" id="r-e" class="list-group-item list-group-item-action">Real para Euro</button>
+      <button type="button" (click)="rd()" class="list-group-item list-group-item-action list-group-item-primary">Real para Dólar</button>
+      <button type="button" (click)="dr()" class="list-group-item list-group-item-action list-group-item-primary">Dólar para Real</button>
+      <button type="button" (click)="re()" class="list-group-item list-group-item-action list-group-item-primary">Real para Euro</button>
     </div><br>
 
     <h5>Câmbio:</h5>
-    <input type= "number" [(ngModel)]="cambio" name="cambio"><br>
+    <input class="form-control" type= "number" [(ngModel)]="cambio" name="cambio"><br>
 
-    <button type="button" class="btn btn-primary" (click)="converter()">Converter</button>
+    <button id="btn" type="button" class="btn btn-primary" (click)="converter()">Converter</button>
 
     <h5>Moeda Convertida:</h5>
-    <input type="number" [(ngModel)]="resp" name="resp" readonly>
+    <input class="form-control" type="number" [(ngModel)]="resp" name="resp" readonly>
 
 
 

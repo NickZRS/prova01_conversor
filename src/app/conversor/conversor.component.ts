@@ -18,6 +18,19 @@ export class ConversorComponent {
       this.resp = this.valor * this.cambio;
 
   }
+  rd(){
+    this.cambio = 0.19;
+
+  }
+  dr(){
+    this.cambio = 5.03;
+  }
+  re(){
+    this.cambio = 0.18;
+
+  }
+
+
 }
 
 
