@@ -19,7 +19,7 @@ export class ConversorComponent {
 
   }
   rd(){
-    this.cambio = 0.19;
+    this.cambio = 0.1988;
 
   }
   dr(){
