@@ -3,23 +3,23 @@
 <form action = "">
 
     <h5>Valor em Reais:</h5>
-    <input type="number" name="valor"><br>
+    <input type="number" [(ngModel)]="valor" name="valor"><br>
 
-    <div ngbDropdown>
-      <button type="button" class="btn btn-outline-primary" id="dropdownConfig" ngbDropdownToggle>Toggle</button>
-      <div ngbDropdownMenu aria-labelledby="dropdownConfig">
-        <button ngbDropdownItem>Action - 1</button>
-        <button ngbDropdownItem>Another Action</button>
-        <button ngbDropdownItem>Something else is here</button>
-      </div>
-    </div>
 
-    <input type= "number" name="cambio"><br>
 
-    <button class="btns" id="btn4" (click)="converter()">Converter</button>
+    <div class="list-group" id="moedas">
+      <button type="button" id="r-d" class="list-group-item list-group-item-action list-group-item-primary">Real para Dólar</button>
+      <button type="button" id="d-r" class="list-group-item list-group-item-action">Dólar para Real</button>
+      <button type="button" id="r-e" class="list-group-item list-group-item-action">Real para Euro</button>
+    </div><br>
+
+    <h5>Câmbio:</h5>
+    <input type= "number" [(ngModel)]="cambio" name="cambio"><br>
+
+    <button type="button" class="btn btn-primary" (click)="converter()">Converter</button>
 
     <h5>Moeda Convertida:</h5>
-    <input type="text" id="resp" readonly>
+    <input type="number" [(ngModel)]="resp" name="resp" readonly>
 
 
 

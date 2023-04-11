@@ -15,7 +15,7 @@ export class ConversorComponent {
 
 
   converter(){
-      this.resp = this.valor* this.cambio;
+      this.resp = this.valor * this.cambio;
 
   }
 }
