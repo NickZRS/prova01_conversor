@@ -8,8 +8,8 @@ import { Component } from '@angular/core';
 export class ConversorComponent {
 
 
-  real: number = 0;
-  resp: number = 0;
+  
+  resp: string = "";
 
   dolar(){
 
@@ -19,12 +19,12 @@ export class ConversorComponent {
 
   euro(){
 
-    this.resp = (this.real*0.18)
+
   }
 
 
   iene(){
 
-    this.resp = (this.real*26.29)
+
   }
 }
