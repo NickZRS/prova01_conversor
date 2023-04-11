@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgbDropdownConfig, NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-conversor',
@@ -8,23 +9,15 @@ import { Component } from '@angular/core';
 export class ConversorComponent {
 
 
-  
-  resp: string = "";
-
-  dolar(){
-
-
-    (<HTMLInputElement>document.getElementById("resp")).value = (this.real*0.2)+" Dólares";
-  }
-
-  euro(){
+  valor: number = 0;
+  cambio : number = 0;
+  resp: number = 0;
 
 
-  }
-
-
-  iene(){
-
+  converter(){
+      this.resp = this.valor* this.cambio;
 
   }
 }
+
+

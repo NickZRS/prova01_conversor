@@ -3,15 +3,24 @@
 <form action = "">
 
     <h5>Valor em Reais:</h5>
-    <input type="text" name="real"><br>
+    <input type="number" name="valor"><br>
 
-    <button class="btns" id="btn1" (click)="dolar()">Converter Real para Dolar </button><br>
-    <button class="btns" id="btn2" (click)="euro()">Converter para Euro </button><br>
-    <button class="btns" id="btn3" (click)="iene()">Converter para Iene Japonês</button><br>
+    <div ngbDropdown>
+      <button type="button" class="btn btn-outline-primary" id="dropdownConfig" ngbDropdownToggle>Toggle</button>
+      <div ngbDropdownMenu aria-labelledby="dropdownConfig">
+        <button ngbDropdownItem>Action - 1</button>
+        <button ngbDropdownItem>Another Action</button>
+        <button ngbDropdownItem>Something else is here</button>
+      </div>
+    </div>
+
+    <input type= "number" name="cambio"><br>
+
+    <button class="btns" id="btn4" (click)="converter()">Converter</button>
 
     <h5>Moeda Convertida:</h5>
     <input type="text" id="resp" readonly>
 
 
 
-</form>
+
